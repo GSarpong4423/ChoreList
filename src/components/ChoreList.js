@@ -2,12 +2,12 @@ import React from 'react';
 
 import './ChoreList.css';
 
-const ChoreList = () => {
+const ChoreList = props => {
     return (
       <ul className="chore-list">
-        <li>Wash the Dishes</li>
-        <li>Clean the kitchen</li>
-        <li>CLean the bathroom</li>
+        {props.items.map(item => {
+            return <li key={item.id}>{item.text}</li>;
+        })}
       </ul>
   );
 };
