@@ -10,7 +10,7 @@ const NewChore = () => {
         id: Math.random().toString(),
         text: 'My new chore'
     };
-    console.log(newChore);
+    console.log(newChore); //check console to see if data appears
 
     };
 
