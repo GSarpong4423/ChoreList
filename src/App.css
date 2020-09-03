@@ -1,15 +1,15 @@
-.chore-Lists h2 {
+.chore-lists h2 {
   text-align: center;
 }
 
-.chore-list {
+.chore-lists {
   list-style: none;
   margin: 2rem;
   padding: 0;
 }
 
-.goal-list li {
-  margin: 1em 0;
+.chore-list li {
+  margin: 1rem 0;
   border: 1 px solid #ccc;
   padding: 1rem;
 }
