@@ -1,20 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import ChoreList from './components/choreList/ChoreList';
 import NewChore from './components/choreList/newChore';
 import './App.css';
 
 const App = () => {
-  const choreGoals = [
+  const [choreGoals, setChoreGoals] = useState([
     {id:'cg1',text: 'Wash the Dishes'},
     {id:'cg2',text: 'Clean the kitchen'},
     {id:'cg3',text: 'CLean the bathroom'},
-  ];
 
+  ]);
+  
   const addNewChoreHandler = (newChore) => {
-    choreGoals.push(newChore);
-    console.log(choreGoals);
-  }
+    setChoreGoals(choreGoals.concat(newChore));
+  };
 
   return(
     <div className="chore-lists">

@@ -10,12 +10,12 @@ const NewChore = props => {
         id: Math.random().toString(),
         text: 'My new chore'
     };
-<<<<<<< HEAD
-    console.log(newChore); //check console to see if data appears
-=======
+
+    console.log(newChore); 
+
     
     props.onAddChore(newChore);
->>>>>>> v2
+
 
     };
 
