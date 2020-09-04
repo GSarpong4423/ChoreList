@@ -13,8 +13,9 @@ const App = () => {
   ]);
   
   const addNewChoreHandler = (newChore) => {
-    setChoreGoals(choreGoals.concat(newChore));
-  };
+    //setChoreGoals(choreGoals.concat(newChore));
+    setChoreGoals((prevChoreGoals) => prevChoreGoals.concat(newChore));
+};
 
   return(
     <div className="chore-lists">
