@@ -11,10 +11,15 @@ const App = () => {
     {id:'cg3',text: 'CLean the bathroom'},
   ];
 
+  const addNewChoreHandler = (newChore) => {
+    choreGoals.push(newChore);
+    console.log(choreGoals);
+  }
+
   return(
     <div className="chore-lists">
       <h2>Chores List</h2>
-      <NewChore />
+      <NewChore onAddChore={addNewChoreHandler} />
       <ChoreList items={choreGoals} />
   </div>
   ); 
