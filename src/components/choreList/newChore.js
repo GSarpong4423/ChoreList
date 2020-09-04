@@ -1,26 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './newChore.css';
 
 const NewChore = props => {
+    const [enteredText, setEnteredText] = useState('');
+
     const addChoreHandler = event => {
         event.preventDefault();
 
     const newChore = {
         id: Math.random().toString(),
-        text: 'My new chore'
+        text: enteredText
     };
 
-    console.log(newChore); 
+    setEnteredText('');
 
     
     props.onAddChore(newChore);
-
-
+};
+    const textChangeHandler = event => {
+        setEnteredText(event.target.value);
     };
 
     return <form className="new-chore"onSubmit ={addChoreHandler}>
-        <input type ="text" />
+        <input type ="text" value={enteredText} onChange={textChangeHandler} />
         <button type="submit">Add Chore </button>
     </form>
 
